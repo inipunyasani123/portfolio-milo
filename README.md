@@ -58,4 +58,4 @@ Buka http://localhost:3000. Untuk build produksi: `npm run build` lalu `npm star
 
 ---
 
-Bagian dari koleksi 7 template portfolio personal di [PortalPorto](https://www.pintuweb.com/website-portofolio). Dibuat oleh [PintuWeb](https://www.pintuweb.com), jasa pembuatan website.
+Bagian dari koleksi 7 template portfolio personal di [PortalPorto](https://www.pintuweb.id/website-portofolio). Dibuat oleh [PintuWeb](https://www.pintuweb.id), jasa pembuatan website.
