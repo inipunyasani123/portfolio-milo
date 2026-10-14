@@ -11,7 +11,7 @@ const fredoka = Fredoka({ variable: "--font-fredoka", subsets: ["latin"], weight
 const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Milo — Designer & Illustrator","description":"Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.","inLanguage":"en"};
 
 export const metadata = {
-  metadataBase: new URL("https://portfolio-milo.vercel.app"),
+  metadataBase: new URL("https://portfolio-milo.pintuweb.id"),
   title: { default: "Milo — Designer & Illustrator", template: "%s — Milo" },
   description: "Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.",
   applicationName: "Milo",
@@ -19,11 +19,11 @@ export const metadata = {
   authors: [{ name: "Milo" }],
   creator: "Milo",
   publisher: "Milo",
-  alternates: { canonical: "https://portfolio-milo.vercel.app" },
+  alternates: { canonical: "https://portfolio-milo.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio-milo.vercel.app",
+    url: "https://portfolio-milo.pintuweb.id",
     siteName: "Milo",
     title: "Milo — Designer & Illustrator",
     description: "Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.",

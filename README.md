@@ -2,7 +2,7 @@
 
 Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.
 
-**Demo live:** https://portfolio-milo.vercel.app
+**Demo live:** https://portfolio-milo.pintuweb.id
 
 ![Tangkapan layar](public/og.jpg)
 
@@ -21,12 +21,12 @@ Persona fiktif Milo, desainer dan ilustrator. Ceria: ubin pastel membulat, aksen
 
 | Studi kasus | Demo live |
 | --- | --- |
-| Mella | https://linkinbio-mellow.vercel.app |
-| Sena | https://linkinbio-zen.vercel.app |
-| Nova Ardhana | https://linkinbio-nova.vercel.app |
-| Atlas Studio | https://linkinbio-atlas.vercel.app |
-| Aisyah’s aqiqah | https://undangan-aqiqah-puce.vercel.app |
-| Captain Fauzan | https://undangan-khitanan-theta.vercel.app |
+| Mella | https://linkinbio-mellow.pintuweb.id |
+| Sena | https://linkinbio-zen.pintuweb.id |
+| Nova Ardhana | https://linkinbio-nova.pintuweb.id |
+| Atlas Studio | https://linkinbio-atlas.pintuweb.id |
+| Aisyah’s aqiqah | https://undangan-aqiqah.pintuweb.id |
+| Captain Fauzan | https://undangan-khitanan.pintuweb.id |
 
 ## Halaman
 
