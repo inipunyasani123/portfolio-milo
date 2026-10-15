@@ -53,6 +53,10 @@ export default function RootLayout({ children }) {
           <ThemeToggle />
         </ThemeProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+        <aside aria-label="About this demo site" style={{ display: 'block', margin: 0, padding: '12px 76px', background: '#0f1b33', color: '#dfe6f3', font: '400 13px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', textAlign: 'center' }}>
+          A demo site by PintuWeb — names and content are fictional.{' '}
+          <a href="https://www.pintuweb.id/en/contact?demo=milo" style={{ color: '#ffffff', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '3px' }}>Get a site like this →</a>
+        </aside>
         </body>
     </html>
   );
