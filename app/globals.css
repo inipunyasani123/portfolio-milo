@@ -50,3 +50,25 @@ body {
 .dark .text-violet-600 { color: #b39dfc !important; }
 .dark .hover\:text-violet-600:hover { color: #ddd6fe !important; }
 .dark .border-violet-100 { border-color: rgba(139,92,246,0.30) !important; }
+
+/* Masuk halaman: hanya geser tipis (tanpa opacity) supaya LCP tidak menunggu JavaScript. */
+@keyframes page-in { from { transform: translateY(10px); } to { transform: none; } }
+.page-in { animation: page-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 100; border-radius: 9999px; border: 2px solid currentColor; background: #5b21b6; color: #ffffff; padding: 10px 18px; font-weight: 600; font-size: 14px; }
+.skip-link:focus { top: 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .page-in, .animate-marquee, .animate-blob, .animate-blob-slow, .hero-rise { animation: none !important; }
+}
+
+/* Reveal ringan (pengganti framer-motion whileInView) + animasi buka menu ponsel. */
+.reveal { opacity: 0; transform: translateY(var(--reveal-y, 24px)); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.reveal.is-shown { opacity: 1; transform: none; }
+@keyframes menu-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.menu-in { animation: menu-in 0.2s ease-out both; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .menu-in { animation: none; }
+}

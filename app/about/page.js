@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/ui/Reveal';
 import { profile, skills, experience, education } from '@/lib/data';
+import { pageMeta } from '@/lib/seo';
 
-export const metadata = { title: 'About' };
+export const metadata = pageMeta({ title: 'About', description: "About Milo, a fictional designer and illustrator: soft illustrations, link pages, and invitations for people who make, teach, and celebrate.", path: '/about' });
 
 export default function AboutPage() {
   return (
@@ -26,7 +27,7 @@ export default function AboutPage() {
                 {profile.bio.map((p, i) => <p key={i}>{p}</p>)}
               </div>
               <Link href="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-violet-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-violet-700">
-                <Download size={16} /> Download CV
+                Ask for a CV <ArrowRight size={16} aria-hidden="true" />
               </Link>
             </div>
           </Reveal>

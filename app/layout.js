@@ -4,37 +4,28 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
 import ThemeToggle from "@/components/ThemeToggle";
+import { SITE_URL, SITE_NAME, SITE_TITLE, SITE_DESC, pageMeta } from "@/lib/seo";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const fredoka = Fredoka({ variable: "--font-fredoka", subsets: ["latin"], weight: ["500", "600", "700"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Milo — Designer & Illustrator","description":"Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.","inLanguage":"en"};
+const __jsonld = {
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "WebSite", "@id": `${SITE_URL}/#website`, "url": SITE_URL, "name": SITE_TITLE, "description": SITE_DESC, "inLanguage": "en", "author": { "@id": `${SITE_URL}/#person` } },
+    { "@type": "Person", "@id": `${SITE_URL}/#person`, "name": "Milo", "jobTitle": "Designer & Illustrator", "description": "A fictional persona for this portfolio template.", "url": SITE_URL },
+  ],
+};
 
 export const metadata = {
-  metadataBase: new URL("https://portfolio-milo.pintuweb.id"),
-  title: { default: "Milo — Designer & Illustrator", template: "%s — Milo" },
-  description: "Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.",
-  applicationName: "Milo",
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_TITLE, template: `%s — ${SITE_NAME}` },
+  applicationName: SITE_NAME,
   keywords: ["illustrator", "product designer", "portfolio", "playful design", "illustration"],
-  authors: [{ name: "Milo" }],
-  creator: "Milo",
-  publisher: "Milo",
-  alternates: { canonical: "https://portfolio-milo.pintuweb.id" },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://portfolio-milo.pintuweb.id",
-    siteName: "Milo",
-    title: "Milo — Designer & Illustrator",
-    description: "Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Milo — Designer & Illustrator" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Milo — Designer & Illustrator",
-    description: "Portfolio template for Milo, a fictional designer and illustrator: playful case studies that link to six live demo sites, plus notes on sticker shops, breathing animations, and storybook invitations.",
-    images: ["/og.jpg"],
-  },
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  ...pageMeta({ description: SITE_DESC, path: '/' }),
   robots: {
     index: true,
     follow: true,
@@ -46,6 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${fredoka.variable}`} suppressHydrationWarning>
       <body className="antialiased">
+        <a href="#konten" className="skip-link">Skip to content</a>
         <ThemeProvider>
           <Navbar />
           {children}

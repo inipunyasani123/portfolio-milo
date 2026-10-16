@@ -1,16 +1,5 @@
-'use client';
-import { motion, useReducedMotion } from 'framer-motion';
-
-// Transisi halus tiap pindah halaman (template = remount per navigasi).
+// Transisi tiap pindah halaman (template = remount per navigasi). Murni CSS: konten sudah
+// terlihat sejak HTML pertama, jadi tidak ada layar kosong sebelum JavaScript jalan.
 export default function Template({ children }) {
-  const reduce = useReducedMotion();
-  return (
-    <motion.div
-      initial={reduce ? false : { opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: reduce ? 0 : 0.35, ease: [0.22, 1, 0.36, 1] }}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div id="konten" className="page-in">{children}</div>;
 }
