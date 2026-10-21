@@ -17,7 +17,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-6 md:grid-cols-2">
           <Reveal>
             <div className="tile relative aspect-[4/5] w-full overflow-hidden">
-              <Image src={profile.about} alt="" fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
+              <Image src={profile.about} alt={profile.aboutAlt} fill sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
             </div>
           </Reveal>
           <Reveal delay={0.1}>

@@ -28,9 +28,9 @@ export default function Home() {
               <Link href="/contact" className="inline-flex min-h-11 items-center gap-1.5 rounded-full border border-white/40 px-5 text-sm font-bold transition hover:bg-white/10"><Emo>Say hi 👋</Emo></Link>
             </div>
           </div>
-          {/* Photo */}
+          {/* Potret ilustrasi */}
           <div className="tile relative col-span-2 row-span-2 overflow-hidden">
-            <Image src={profile.avatar} alt="" fill priority fetchPriority="high" sizes="(max-width:768px) 100vw, 50vw" className="object-cover" />
+            <Image src={profile.avatar} alt={profile.avatarAlt} fill priority fetchPriority="high" sizes="(max-width:768px) calc(100vw - 32px), 568px" className="object-cover" />
           </div>
           {/* Stats */}
           {stats.map((s, i) => {
